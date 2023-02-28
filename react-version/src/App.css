@@ -112,3 +112,19 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.win {
+  background-color: purple;
+}
+
+.lose {
+  background-color: red;
+}
+
+.newscore {
+  background-color: darkgreen;
+}
+
+.playing {
+  background-color: black;
+}
