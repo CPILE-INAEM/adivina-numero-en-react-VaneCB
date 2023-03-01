@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useRef, useEffect } from "react";
 import MostrarMensaje from "./MostrarMensaje";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 const randomNumber = () => Math.trunc(Math.random() * 20) + 1;
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
     estado = "win";
   } else if (score === 0) {
     estado = "lose";
-  } else if (highscore > score) {
+  } else if (score > highscore && highscore !== 0) {
     estado = "newscore";
   } else {
     estado = "playing";
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <div className={estado}>
+      <FloatingWhatsApp />
       {console.log("Renderizando App")}
       <header>
         <h1>Guess My Number!</h1>
